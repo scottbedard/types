@@ -1,5 +1,0 @@
-export { Equal } from './src/Equal'
-export { Expect } from './src/Expect'
-export { NotEqual } from './src/NotEqual'
-export { Without } from './src/Without'
-export { XOR } from './src/XOR'
