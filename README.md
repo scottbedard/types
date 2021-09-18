@@ -33,7 +33,7 @@ import { Expect, Equal } from '@bedard/types'
 type Test = Expect<Equal<number, number>>
 ```
 
-<h3><a name="expect">`Expect<T>`</a></h3>
+<h3><a name="expect"><code>Expect<T></code></a></h3>
 
 Verify that `T` is `true`. This allows for assertions to be made using the type system. See [`Equal`](#equal) and [`NotEqual`](#notequal) for more usage examples.
 
