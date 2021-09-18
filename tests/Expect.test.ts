@@ -1,4 +1,4 @@
-import { Expect } from '../src'
+import { Expect } from '../index'
 
 type Test1 = Expect<true>
 
