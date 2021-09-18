@@ -9,7 +9,7 @@
   },
   "homepage": "https://github.com/scottbedard/types#readme",
   "license": "MIT",
-  "main": "index.d.ts",
+  "main": "dist/index.js",
   "name": "@bedard/types",
   "repository": {
     "type": "git",
