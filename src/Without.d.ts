@@ -1,6 +1,6 @@
 /**
- * Convert A keys to never that aren't part of B
- * 
+ * Prohibit properties of `A` while excluding properties of `B`.
+ *
  * @example
  * Without<{ a: any, b: any }, { b: any }> // { a?: never }
  */

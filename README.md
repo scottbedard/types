@@ -55,8 +55,25 @@ type Test = Expect<NotEqual<number, string>>
 
 ### `Without<A, B>`
 
-Soon...
+Prohibit properties of `A` while excluding properties of `B`. This can be useful with [interesection types](https://www.typescriptlang.org/docs/handbook/2/objects.html#intersection-types) to build utilities like the [`XOR`](#xor) type.
 
-### `XOR<A, B>`
+```ts
+import { Without } from '@bedard/types'
 
-Soon...
+type FooWithoutBar = Without<{ foo: any, bar: any }, { bar: any }> // { foo?: never }
+```
+
+### <a id="xor">`XOR<A, B>`</a>
+
+Create an [exclusive or](https://en.wikipedia.org/wiki/Exclusive_or) between two types. Note that for objects, this differs from a union type in that keys are strictly matched.
+
+```ts
+import { XOR } from '@bedard/types'
+
+type FooOrBar = XOR<{ foo: any }, { bar: any }>
+
+const a: FooOrBar = { foo } // pass
+const b: FooOrBar = { bar } // pass
+const c: FooOrBar = { foo, bar } // fail
+```
+
