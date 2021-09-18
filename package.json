@@ -12,7 +12,7 @@
     "url": "git+https://github.com/scottbedard/types.git"
   },
   "scripts": {
-    "test": "tsc ./tests/*.d.ts"
+    "test": "tsc tests/*.ts --listFiles --noEmit"
   },
   "version": "0.1.0",
   "devDependencies": {
