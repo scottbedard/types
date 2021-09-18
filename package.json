@@ -23,5 +23,5 @@
     "publish:ci": "node ./scripts/publish.js",
     "test": "tsc tests/*.ts --listFiles --noEmit"
   },
-  "version": "0.2.1"
+  "version": "0.2.2"
 }
