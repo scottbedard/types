@@ -1,3 +1,4 @@
+export { Difference } from './Difference'
 export { Equal } from './Equal'
 export { Expect } from './Expect'
 export { Intersection } from './Intersection'

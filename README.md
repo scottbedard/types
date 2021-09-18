@@ -17,6 +17,7 @@ npm install @bedard/types
 
 ## Utility types
 
+- [`Difference<A, B>`](#differencea-b)
 - [`Equal<A, B>`](#equala-b)
 - [`Expect<T>`](#expectt)
 - [`Intersection<A, B>`](#intersectiona-b)
@@ -25,6 +26,16 @@ npm install @bedard/types
 - [`ValueOf<T>`](#valueoft)
 - [`Without<A, B>`](#withouta-b)
 - [`XOR<A, B>`](#xora-b)
+
+### `Difference<A, B>`
+
+Elements of `A` that are not elements of `B`. For unions, this is the same as the [`Exclude`](https://www.typescriptlang.org/docs/handbook/utility-types.html#excludetype-excludedunion) utility.
+
+```ts
+import { Difference } from '@bedard/types'
+
+type Left = Difference<{ a: any, b: any }, { b: any, c: any }> // { a: any }
+```
 
 ### `Equal<A, B>`
 
@@ -80,7 +91,7 @@ type OuterObj= SymmetricDifference<{ a: any, b: any }, { b: any, c: any }> // { 
 
 ### `ValueOf<T>`
 
-Generate a union from the values of `T`. This can be thought of as an opposite to the [`keyof` operator](https://www.typescriptlang.org/docs/handbook/2/keyof-types.html).
+Generate a union from the values of `T`. This can be thought of as an opposite to the [`keyof`](https://www.typescriptlang.org/docs/handbook/2/keyof-types.html) operator.
 
 ```ts
 import { ValueOf } from '@bedard/types'
