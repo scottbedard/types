@@ -53,7 +53,7 @@ import { Expect, NotEqual } from '@bedard/types'
 type Test = Expect<NotEqual<number, string>>
 ```
 
-### `Without<A, B>`
+### <a id="without">`Without<A, B>`</a>
 
 Prohibit properties of `A` while excluding properties of `B`. This can be useful with [interesection types](https://www.typescriptlang.org/docs/handbook/2/objects.html#intersection-types) to build utilities like the [`XOR`](#xor) type.
 
