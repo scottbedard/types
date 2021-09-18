@@ -23,7 +23,7 @@ npm install @bedard/types
 - `Without`
 - `XOR`
 
-<h3 id="equal"><code>Equal&lt;A, B&gt;</code></h3>
+### <a id="equal">`Equal`</a>
 
 Types `true` if `A` and `B` are equal. This is mainly used with [`Expect`](#expect) to verify that types are working as expected. See [`NotEqual`](#notequal) for the inverse of this type.
 
@@ -33,7 +33,7 @@ import { Expect, Equal } from '@bedard/types'
 type Test = Expect<Equal<number, number>>
 ```
 
-<h3><a name="expect"><code>Expect<T></code></a></h3>
+### <a id="expect">`Expect`</a>
 
 Verify that `T` is `true`. This allows for assertions to be made using the type system. See [`Equal`](#equal) and [`NotEqual`](#notequal) for more usage examples.
 
@@ -43,7 +43,7 @@ import { Expect } from '@bedard/types'
 type Test = Expect<true>
 ```
 
-<h3><a name="notequal"><code>NotEqual<A, B></code></a></h3>
+### <a id="notequal">`NotEqual<A, B>`</a>
 
 Types `true` if `A` does not equal `B`. This type is mainly used with [`Expect`](#expect) to verify that types are working as expected. See [`Equal`](#equal) for the inverse of this type.
 
