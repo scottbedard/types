@@ -21,6 +21,7 @@ npm install @bedard/types
 - [`Expect<T>`](#expectt)
 - [`NotEqual<A, B>`](#notequala-b)
 - [`SymmetricDifference<A, B>`](#symmetricdifferencea-b)
+- [`ValueOf<T>`](#valueoft)
 - [`Without<A, B>`](#withouta-b)
 - [`XOR<A, B>`](#xora-b)
 
@@ -62,6 +63,16 @@ The [symmetric difference](https://en.wikipedia.org/wiki/Symmetric_difference) o
 import { SymmetricDifference } from '@bedard/types'
 
 type Outer = SymmetricDifference<'a' | 'b', 'b' | 'c'> // 'a' | 'c'
+```
+
+### `ValueOf<T>`
+
+Generate a union from the values of `T`. This can be thought of as an opposite to the [`keyof` operator](https://www.typescriptlang.org/docs/handbook/2/keyof-types.html).
+
+```ts
+import { ValueOf } from '@bedard/types'
+
+type Values = ValueOf<{ foo: number, bar: string }> // number | string
 ```
 
 ### `Without<A, B>`
