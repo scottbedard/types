@@ -20,8 +20,8 @@ npm install @bedard/types
 - [`Equal<A, B>`](#equal)
 - [`Expect`](#expect)
 - [`NotEqual`](#notequal)
-- `Without`
-- `XOR`
+- [`Without`](#without)
+- [`XOR`](#xor)
 
 ### <a id="equal">`Equal<A, B>`</a>
 
