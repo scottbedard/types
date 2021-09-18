@@ -17,13 +17,14 @@ npm install @bedard/types
 
 ## Utility types
 
-- [`Equal<A, B>`](#equal)
-- [`Expect`](#expect)
-- [`NotEqual`](#notequal)
-- [`Without`](#without)
-- [`XOR`](#xor)
+- [`Equal<A, B>`](#equala-b)
+- [`Expect<T>`](#expectt)
+- [`NotEqual<A, B>`](#notequala-b)
+- [`SymmetricDifference<A, B>`](#symmetricdifferencea-b)
+- [`Without<A, B>`](#withouta-b)
+- [`XOR<A, B>`](#xora-b)
 
-### <a id="equal">`Equal<A, B>`</a>
+### `Equal<A, B>`
 
 Types `true` if `A` and `B` are equal. This is mainly used with [`Expect`](#expect) to verify that types are working as expected. See [`NotEqual`](#notequal) for the inverse of this type.
 
@@ -33,7 +34,7 @@ import { Expect, Equal } from '@bedard/types'
 type Test = Expect<Equal<number, number>>
 ```
 
-### <a id="expect">`Expect<T>`</a>
+### `Expect<T>`
 
 Verify that `T` is `true`. This allows for assertions to be made using the type system. See [`Equal`](#equal) and [`NotEqual`](#notequal) for more usage examples.
 
@@ -43,7 +44,7 @@ import { Expect } from '@bedard/types'
 type Test = Expect<true>
 ```
 
-### <a id="notequal">`NotEqual<A, B>`</a>
+### `NotEqual<A, B>`
 
 Types `true` if `A` does not equal `B`. This type is mainly used with [`Expect`](#expect) to verify that types are working as expected. See [`Equal`](#equal) for the inverse of this type.
 
@@ -53,7 +54,7 @@ import { Expect, NotEqual } from '@bedard/types'
 type Test = Expect<NotEqual<number, string>>
 ```
 
-### <a id="symmetricdifference">`SymmetricDifference<A, B>`</a>
+### `SymmetricDifference<A, B>`
 
 The [symmetric difference](https://en.wikipedia.org/wiki/Symmetric_difference) of `A` and `B`.
 
@@ -63,9 +64,9 @@ import { SymmetricDifference } from '@bedard/types'
 type Outer = SymmetricDifference<'a' | 'b', 'b' | 'c'> // 'a' | 'c'
 ```
 
-### <a id="without">`Without<A, B>`</a>
+### `Without<A, B>`
 
-Prohibit properties of `A` while excluding properties of `B`. This can be useful with [interesection types](https://www.typescriptlang.org/docs/handbook/2/objects.html#intersection-types) to build utilities like the [`XOR`](#xor) type.
+Prohibit properties of `A` and omit properties of `B`.
 
 ```ts
 import { Without } from '@bedard/types'
@@ -73,7 +74,7 @@ import { Without } from '@bedard/types'
 type FooWithoutBar = Without<{ foo: any, bar: any }, { bar: any }> // { foo?: never }
 ```
 
-### <a id="xor">`XOR<A, B>`</a>
+### `XOR<A, B>`
 
 Create an [exclusive or](https://en.wikipedia.org/wiki/Exclusive_or) between two types. Note that for objects, this differs from a union type in that keys are strictly matched.
 
@@ -86,4 +87,3 @@ const a: FooOrBar = { foo } // pass
 const b: FooOrBar = { bar } // pass
 const c: FooOrBar = { foo, bar } // fail
 ```
-
