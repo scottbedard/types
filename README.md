@@ -73,7 +73,9 @@ The [symmetric difference](https://en.wikipedia.org/wiki/Symmetric_difference) o
 ```ts
 import { SymmetricDifference } from '@bedard/types'
 
-type Outer = SymmetricDifference<'a' | 'b', 'b' | 'c'> // 'a' | 'c'
+type OuterSet = SymmetricDifference<'a' | 'b', 'b' | 'c'> // 'a' | 'c'
+
+type OuterObj= SymmetricDifference<{ a: any, b: any }, { b: any, c: any }> // { a: any, c: any }
 ```
 
 ### `ValueOf<T>`
