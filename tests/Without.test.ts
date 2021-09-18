@@ -2,7 +2,7 @@ import {
   Equal,
   Expect,
   Without,
-} from '../index'
+} from '../src'
 
 type Foo = { a: any, b: any }
 

@@ -1,4 +1,4 @@
-import { Equal, Expect } from '../index'
+import { Equal, Expect } from '../src'
 
 type Test1 = Expect<Equal<number, number>>
 

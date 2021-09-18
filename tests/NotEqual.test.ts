@@ -1,4 +1,4 @@
-import { Expect, NotEqual } from '../index'
+import { Expect, NotEqual } from '../src'
 
 type Test1 = Expect<NotEqual<true, false>>
 

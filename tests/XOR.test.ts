@@ -2,7 +2,7 @@ import {
   Expect,
   Equal,
   XOR,
-} from '../index'
+} from '../src'
 
 /**
  * Acts as a union for primitive types
