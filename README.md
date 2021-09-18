@@ -53,6 +53,16 @@ import { Expect, NotEqual } from '@bedard/types'
 type Test = Expect<NotEqual<number, string>>
 ```
 
+### <a id="symmetricdifference">`SymmetricDifference<A, B>`</a>
+
+The [symmetric difference](https://en.wikipedia.org/wiki/Symmetric_difference) of `A` and `B`.
+
+```ts
+import { SymmetricDifference } from '@bedard/types'
+
+type Outer = SymmetricDifference<'a' | 'b', 'b' | 'c'> // 'a' | 'c'
+```
+
 ### <a id="without">`Without<A, B>`</a>
 
 Prohibit properties of `A` while excluding properties of `B`. This can be useful with [interesection types](https://www.typescriptlang.org/docs/handbook/2/objects.html#intersection-types) to build utilities like the [`XOR`](#xor) type.

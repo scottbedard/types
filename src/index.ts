@@ -1,7 +1,8 @@
 export { Equal } from './Equal'
 export { Expect } from './Expect'
 export { NotEqual } from './NotEqual'
+export { SymmetricDifference } from './SymetricDifference'
 export { Without } from './Without'
 export { XOR } from './XOR'
 
-export const version = '0.2.1'
+export const version = 'x.y.z'
