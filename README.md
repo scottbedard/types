@@ -19,6 +19,7 @@ npm install @bedard/types
 
 - [`Equal<A, B>`](#equala-b)
 - [`Expect<T>`](#expectt)
+- [`Intersection<A, B>`](#intersectiona-b)
 - [`NotEqual<A, B>`](#notequala-b)
 - [`SymmetricDifference<A, B>`](#symmetricdifferencea-b)
 - [`ValueOf<T>`](#valueoft)
@@ -43,6 +44,16 @@ Verify that `T` is `true`. This allows for assertions to be made using the type 
 import { Expect } from '@bedard/types'
 
 type Test = Expect<true>
+```
+
+### `Intersection<A, B>`
+
+The [intersection](https://en.wikipedia.org/wiki/Intersection_(set_theory) of `A` and `B`, giving preference to `A`.
+
+```ts
+import { Intersection } from '@bedard/types'
+
+type Shared = Intersection<{ a: any, b: number }, { c: string, d: any }> // { b: number }
 ```
 
 ### `NotEqual<A, B>`
