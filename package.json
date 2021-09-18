@@ -3,6 +3,9 @@
   "bugs": {
     "url": "https://github.com/scottbedard/types/issues"
   },
+  "devDependencies": {
+    "typescript": "^4.4.3"
+  },
   "homepage": "https://github.com/scottbedard/types#readme",
   "license": "MIT",
   "main": "index.d.ts",
@@ -14,8 +17,5 @@
   "scripts": {
     "test": "tsc tests/*.ts --listFiles --noEmit"
   },
-  "version": "0.1.0",
-  "devDependencies": {
-    "typescript": "^4.4.3"
-  }
+  "version": "0.1.0"
 }
