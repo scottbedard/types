@@ -21,6 +21,7 @@ npm install @bedard/types
 - [`Equal<A, B>`](#equala-b)
 - [`Expect<T>`](#expectt)
 - [`Intersection<A, B>`](#intersectiona-b)
+- [`Join<Parts, Delimeter>`](#joinparts-delimeter)
 - [`NotEqual<A, B>`](#notequala-b)
 - [`Split<Source, Delimeter>`](#splitsource-delimeter)
 - [`SymmetricDifference<A, B>`](#symmetricdifferencea-b)
@@ -68,6 +69,18 @@ import { Intersection } from '@bedard/types'
 type Shared = Intersection<{ a: any, b: number }, { c: string, d: any }> // { b: number }
 ```
 
+### `Join<Parts, Delimeter>`
+
+Join `Parts` by `Delimeter`. This type is the opposite of [`Split`](#splitsource-delimeter).
+
+```ts
+import { Join } from '@bedard/types'
+
+type Str = Join<['a', 'b', 'c']> // 'abc'
+
+type Parts = Join<['a', 'b', 'c'], '.'> // 'a.b.c'
+```
+
 ### `NotEqual<A, B>`
 
 Types `true` if `A` does not equal `B`. This type is mainly used with [`Expect`](#expect) to verify that types are working as expected. See [`Equal`](#equal) for the inverse of this type.
@@ -80,7 +93,7 @@ type Test = Expect<NotEqual<number, string>>
 
 ### `Split<Source, Delimeter>`
 
-Split `Source` by `Delimeter`.
+Split `Source` by `Delimeter`. This type is the opposite of [`Join`](#joinparts-delimeter).
 
 ```ts
 import { Split } from '@bedard/types'
