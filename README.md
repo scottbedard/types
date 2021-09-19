@@ -61,7 +61,7 @@ type Test = Expect<true>
 
 ### `Intersection<A, B>`
 
-The [intersection](https://en.wikipedia.org/wiki/Intersection_(set_theory) of `A` and `B`, giving preference to `A`.
+The [intersection](https://en.wikipedia.org/wiki/Intersection_(set_theory)) of `A` and `B`, giving preference to `A`.
 
 ```ts
 import { Intersection } from '@bedard/types'
