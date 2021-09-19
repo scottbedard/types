@@ -23,6 +23,7 @@ npm install @bedard/types
 - [`Intersection<A, B>`](#intersectiona-b)
 - [`Join<Parts, Delimeter>`](#joinparts-delimeter)
 - [`NotEqual<A, B>`](#notequala-b)
+- [`Shift`](#shiftt)
 - [`Split<Source, Delimeter>`](#splitsource-delimeter)
 - [`SymmetricDifference<A, B>`](#symmetricdifferencea-b)
 - [`ValueOf<T>`](#valueoft)
@@ -89,6 +90,16 @@ Types `true` if `A` does not equal `B`. This type is mainly used with [`Expect`]
 import { Expect, NotEqual } from '@bedard/types'
 
 type Test = Expect<NotEqual<number, string>>
+```
+
+### `Shift<T>`
+
+Remove the first element from `T`.
+
+```ts
+import { Shift } from '@bedard/types'
+
+type Tail = Shift<['foo', 'bar', 'baz']> // ['bar', 'baz']
 ```
 
 ### `Split<Source, Delimeter>`
