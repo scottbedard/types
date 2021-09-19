@@ -4,4 +4,4 @@
  * @example
  * type Tail = Shift<['foo', 'bar', 'baz']> // ['bar', 'baz']
  */
-export type Shift<T extends any[]> = T extends [a: any, ...b: infer Tail] ? Tail : []
+export type Shift<T extends any[]> = T extends [any, ...infer Rest] ? Rest : []
