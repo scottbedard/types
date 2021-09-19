@@ -85,7 +85,9 @@ Split `Source` by `Delimeter`.
 ```ts
 import { Split } from '@bedard/types'
 
-type Parts = Split<'a-b-c', '-'> // ['a', 'b', 'c']
+type Characters = Split<'abc'> // ['a', 'b', 'c']
+
+type Parts = Split<'a.b.c', '.'> // ['a', 'b', 'c']
 ```
 
 ### `SymmetricDifference<A, B>`
