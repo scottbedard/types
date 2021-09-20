@@ -3,6 +3,7 @@
 [![Test status](https://img.shields.io/github/workflow/status/scottbedard/types/Test)](https://github.com/scottbedard/types/actions/workflows/test.yml)
 [![Dependencies](https://img.shields.io/david/scottbedard/types)](https://david-dm.org/scottbedard/types)
 [![Dev dependencies](https://img.shields.io/david/dev/scottbedard/types)](https://david-dm.org/scottbedard/types?type=dev)
+[![NPM](https://img.shields.io/npm/v/@bedard/types)](https://www.npmjs.com/package/@bedard/types)
 [![License](https://img.shields.io/github/license/scottbedard/types?color=blue)](https://github.com/scottbedard/types/blob/main/LICENSE)
 
 The goal of this package is to act as an extension to Typescript's built-in utility types. There is currently no runtime, but that may change if type guards are added. I don't anticipate breaking changes, but with that said this is mainly for personal use, so upgrade with caution.
@@ -159,3 +160,7 @@ const a: FooOrBar = { foo } // pass
 const b: FooOrBar = { bar } // pass
 const c: FooOrBar = { foo, bar } // fail
 ```
+
+## License
+
+[MIT](https://github.com/scottbedard/types/blob/main/LICENSE)
