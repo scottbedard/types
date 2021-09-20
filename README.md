@@ -24,7 +24,7 @@ npm install @bedard/types
 - [`Intersection<A, B>`](#intersectiona-b)
 - [`Join<Parts, Delimeter>`](#joinparts-delimeter)
 - [`NotEqual<A, B>`](#notequala-b)
-- [`Pop`](#popt)
+- [`Pop<T>`](#popt)
 - [`Shift<T>`](#shiftt)
 - [`Split<Source, Delimeter>`](#splitsource-delimeter)
 - [`SymmetricDifference<A, B>`](#symmetricdifferencea-b)
