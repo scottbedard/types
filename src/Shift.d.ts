@@ -1,5 +1,5 @@
 /**
- * Remove the first element from `T`.
+ * Remove the first element of `T`.
  * 
  * @example
  * type Tail = Shift<['foo', 'bar', 'baz']> // ['bar', 'baz']

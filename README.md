@@ -24,6 +24,7 @@ npm install @bedard/types
 - [`Intersection<A, B>`](#intersectiona-b)
 - [`Join<Parts, Delimeter>`](#joinparts-delimeter)
 - [`NotEqual<A, B>`](#notequala-b)
+- [`Pop`](#popt)
 - [`Shift<T>`](#shiftt)
 - [`Split<Source, Delimeter>`](#splitsource-delimeter)
 - [`SymmetricDifference<A, B>`](#symmetricdifferencea-b)
@@ -93,14 +94,24 @@ import { Expect, NotEqual } from '@bedard/types'
 type Test = Expect<NotEqual<number, string>>
 ```
 
+### `Pop<T>`
+
+Remove the last element of `T`.
+
+```ts
+import { Pop } from '@bedard/types'
+
+type Items = Pop<['foo', 'bar', 'baz']> // ['foo', 'bar']
+```
+
 ### `Shift<T>`
 
-Remove the first element from `T`.
+Remove the first element of `T`.
 
 ```ts
 import { Shift } from '@bedard/types'
 
-type Tail = Shift<['foo', 'bar', 'baz']> // ['bar', 'baz']
+type Items = Shift<['foo', 'bar', 'baz']> // ['bar', 'baz']
 ```
 
 ### `Split<Source, Delimeter>`
