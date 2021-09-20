@@ -24,6 +24,7 @@ npm install @bedard/types
 - [`Intersection<A, B>`](#intersectiona-b)
 - [`Join<Parts, Delimeter>`](#joinparts-delimeter)
 - [`NotEqual<A, B>`](#notequala-b)
+- [`Opaque<T, Token>`](#opaquet-token)
 - [`Pop<T>`](#popt)
 - [`Shift<T>`](#shiftt)
 - [`Split<Source, Delimeter>`](#splitsource-delimeter)
@@ -92,6 +93,18 @@ Types `true` if `A` does not equal `B`. This type is mainly used with [`Expect`]
 import { Expect, NotEqual } from '@bedard/types'
 
 type Test = Expect<NotEqual<number, string>>
+```
+
+### `Opaque<T, Token>`
+
+[Opaque type](https://en.wikipedia.org/wiki/Opaque_data_type) `T` with an optional `Token`. This is similar to Flow's [`Opaque`](https://codemix.com/opaque-types-in-javascript) types. For more info on opaque types, [this article](https://codemix.com/opaque-types-in-javascript) provides a great introduction.
+
+```ts
+import { Opaque } from '@bedard/types'
+
+type USD = Opaque<number, 'usd'>
+
+const dollars = 5 as USD
 ```
 
 ### `Pop<T>`
