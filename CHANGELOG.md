@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.4.0
+
+- [`Opaque<T, Token>`](https://github.com/scottbedard/types#opaquet-token)
 ## 0.3.0
 
 - [`Pop<T>`](https://github.com/scottbedard/types#popt)
