@@ -97,7 +97,7 @@ type Test = Expect<NotEqual<number, string>>
 
 ### `Opaque<T, Token>`
 
-[Opaque type](https://en.wikipedia.org/wiki/Opaque_data_type) `T` with an optional `Token`. This is similar to Flow's [`Opaque`](https://codemix.com/opaque-types-in-javascript) types. For more info on opaque types, [this article](https://codemix.com/opaque-types-in-javascript) provides a great introduction.
+[Opaque type](https://en.wikipedia.org/wiki/Opaque_data_type) `T` with an optional `Token`. For more on opaque types, [this article](https://codemix.com/opaque-types-in-javascript) is a great place to start.
 
 ```ts
 import { Opaque } from '@bedard/types'
