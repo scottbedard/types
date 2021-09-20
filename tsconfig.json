@@ -1,12 +1,30 @@
 {
   "compilerOptions": {
+    "baseUrl": "src",
     "declaration": true,
-    "module": "commonjs",
+    "declarationDir": "./dist",
+    "esModuleInterop": true,
+    "module": "es6",
     "moduleResolution": "node",
+    "noImplicitAny": true,
+    "outDir": "./dist",
+    "paths": {
+      "@/*": ["*"],
+    },
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
     "sourceMap": true,
-    "strict": true,
-    "target": "es6"
+    "target": "es2015"
   },
-  "exclude": ["tests/**/*"],
-  "include": ["src/**/*"]
+  "exclude": [
+    "dist",
+    "node_modules",
+    "scripts",
+  ],
+  "include": [
+    "rollup.config.ts",
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "tests/**/*.ts",
+  ],
 }

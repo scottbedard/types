@@ -3,23 +3,27 @@
   "bugs": {
     "url": "https://github.com/scottbedard/types/issues"
   },
+  "dependencies": {},
   "devDependencies": {
     "copyfiles": "^2.4.1",
+    "rollup": "^2.56.3",
+    "rollup-plugin-delete": "^2.0.0",
+    "rollup-plugin-ts": "^1.4.2",
     "typescript": "^4.4.3"
   },
   "homepage": "https://github.com/scottbedard/types#readme",
   "license": "MIT",
   "main": "dist/index.js",
+  "module": "dist/index.esm.js",
   "name": "@bedard/types",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/scottbedard/types.git"
   },
   "scripts": {
-    "build": "tsc -p tsconfig.json --outDir dist/",
+    "build": "rollup -c",
     "copy-dts": "copyfiles -u 1 \"src/**/*.d.ts\" dist",
     "postbuild": "npm run copy-dts",
-    "prebuild": "rm -rf dist/",
     "publish:ci": "node ./scripts/publish.js",
     "test": "tsc tests/*.ts --listFiles --noEmit"
   },
