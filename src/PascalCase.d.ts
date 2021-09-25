@@ -4,9 +4,9 @@ import { MapCapitalize } from './MapCapitalize'
 import { MapLowercase } from './MapLowercase'
 
 /**
- * Convert a string to camel case.
+ * Convert a string to pascal case.
  * 
  * @example
- * type Str = CamelCase<'foo-bar'> // 'fooBar'
+ * type Str = PascalCase<'foo-bar'> // 'FooBar'
  */
-export type CamelCase<T extends string> = Uncapitalize<Join<MapCapitalize<MapLowercase<BreakWords<T>>>>>
+export type PascalCase<T extends string> = Capitalize<Join<MapCapitalize<MapLowercase<BreakWords<T>>>>>

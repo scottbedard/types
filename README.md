@@ -29,6 +29,7 @@ npm install @bedard/types
 - [`MapLowercase<T>`](#maplowercaset)
 - [`NotEqual<A, B>`](#notequala-b)
 - [`Opaque<T, Token>`](#opaquet-token)
+- [`PascalCase<T>`](#pascalcaset)
 - [`Pop<T>`](#popt)
 - [`Shift<T>`](#shiftt)
 - [`SnakeCase<T>`](#snakecaset)
@@ -150,6 +151,16 @@ import { Opaque } from '@bedard/types'
 type USD = Opaque<number, 'usd'>
 
 const dollars = 5 as USD
+```
+
+### `PascalCase<T>`
+
+Convert a string to pascal case.
+
+```ts
+import { PascalCase } from '@bedard/types'
+
+type Str = PascalCase<'foo-bar'> // 'FooBar'
 ```
 
 ### `Pop<T>`
