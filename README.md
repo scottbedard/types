@@ -24,6 +24,7 @@ npm install @bedard/types
 - [`Expect<T>`](#expectt)
 - [`Intersection<A, B>`](#intersectiona-b)
 - [`Join<Parts, Delimeter>`](#joinparts-delimeter)
+- [`MapLowercase<T>`](#maplowercaset)
 - [`NotEqual<A, B>`](#notequala-b)
 - [`Opaque<T, Token>`](#opaquet-token)
 - [`Pop<T>`](#popt)
@@ -94,6 +95,16 @@ import { Join } from '@bedard/types'
 type Str = Join<['a', 'b', 'c']> // 'abc'
 
 type Parts = Join<['a', 'b', 'c'], '.'> // 'a.b.c'
+```
+
+### `MapLowercase<T>`
+
+Map strings to lowercase.
+
+```ts
+import { MapLowercase } from '@bedard/types'
+
+type Lower = MapLowercase<['A', 'B']> // ['a', 'b']
 ```
 
 ### `NotEqual<A, B>`
