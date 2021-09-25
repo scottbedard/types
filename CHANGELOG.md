@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.5.0
+
+- [`BreakWords<T>`](https://github.com/scottbedard/types#breakcaset)
+- [`CamelCase<T>`](https://github.com/scottbedard/types#camelcaset)
+- [`MapCapitalize<T>`](https://github.com/scottbedard/types#mapcapitalizet)
+- [`MapLowercase<T>`](https://github.com/scottbedard/types#maplowercaset)
+- [`PascalCase<T>`](https://github.com/scottbedard/types#pascalcaset)
+- [`SnakeCase<T>`](https://github.com/scottbedard/types#snakecaset)
 ## 0.4.0
 
 - [`Opaque<T, Token>`](https://github.com/scottbedard/types#opaquet-token)
