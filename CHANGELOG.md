@@ -4,6 +4,7 @@
 
 - [`AllEqual<Sources, Value>`](https://github.com/scottbedard/types#allequalsources-value)
 - [`Extends<A, B>`](https://github.com/scottbedard/types#extendsa-b)
+- [`First`](https://github.com/scottbedard/types#firstt)
 - [`KebabCase<T>`](https://github.com/scottbedard/types#kebabcaset)
 - [`Last`](https://github.com/scottbedard/types#lastt)
 

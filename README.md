@@ -25,6 +25,7 @@ npm install @bedard/types
 - [`Equal<A, B>`](#equala-b)
 - [`Expect<T>`](#expectt)
 - [`Extends<A, B>`](#extendsa-b)
+- [`First<T>`](#firstt)
 - [`Intersection<A, B>`](#intersectiona-b)
 - [`Join<Parts, Delimeter>`](#joinparts-delimeter)
 - [`KebabCase<T>`](#kebabcaset)
@@ -112,6 +113,17 @@ Types `true` if `A` extends `B`.
 import { Extends } from '@bedard/types'
 
 type Test = Extends<'foo', string> // true
+```
+
+### `First<T>`
+
+Extract the first element of a string or array.
+
+```ts
+import { First } from '@bedard/types'
+
+type FirstChar = First<'abc'> // 'a'
+type FirstItem = First<[1, 2, 3]>, // 1
 ```
 
 ### `Intersection<A, B>`
