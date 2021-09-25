@@ -25,7 +25,7 @@ npm install @bedard/types
 - [`Expect<T>`](#expectt)
 - [`Intersection<A, B>`](#intersectiona-b)
 - [`Join<Parts, Delimeter>`](#joinparts-delimeter)
-- [`KebabCase`](#kebabcaset)
+- [`KebabCase<T>`](#kebabcaset)
 - [`MapCapitalize<T>`](#mapcapitalizet)
 - [`MapLowercase<T>`](#maplowercaset)
 - [`NotEqual<A, B>`](#notequala-b)
