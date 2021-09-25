@@ -24,6 +24,7 @@ npm install @bedard/types
 - [`Expect<T>`](#expectt)
 - [`Intersection<A, B>`](#intersectiona-b)
 - [`Join<Parts, Delimeter>`](#joinparts-delimeter)
+- [`MapCapitalize<T>`](#mapcapitalizet)
 - [`MapLowercase<T>`](#maplowercaset)
 - [`NotEqual<A, B>`](#notequala-b)
 - [`Opaque<T, Token>`](#opaquet-token)
@@ -96,6 +97,16 @@ import { Join } from '@bedard/types'
 type Str = Join<['a', 'b', 'c']> // 'abc'
 
 type Parts = Join<['a', 'b', 'c'], '.'> // 'a.b.c'
+```
+
+### `MapCapitalize<T>`
+
+Capitalize the first letter of each string.
+
+```ts
+import { MapCapitalize } from '@bedard/types'
+
+type Capitalized = MapLowercase<['foo', 'bar']> // ['Foo', 'Bar']
 ```
 
 ### `MapLowercase<T>`
