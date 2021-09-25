@@ -18,6 +18,7 @@ npm install @bedard/types
 
 ## Utility types
 
+- [`AllEqual<Sources, Value>`](#allequalsources-value)
 - [`BreakWords<T>`](#breakwordst)
 - [`CamelCase<T>`](#camelcaset)
 - [`Difference<A, B>`](#differencea-b)
@@ -40,6 +41,17 @@ npm install @bedard/types
 - [`ValueOf<T>`](#valueoft)
 - [`Without<A, B>`](#withouta-b)
 - [`XOR<A, B>`](#xora-b)
+
+### `AllEqual<Sources, Value>`
+
+Types `true` if all `Sources` equal `Value`.
+
+```ts
+import { AllEqual } from '@bedard/types'
+
+type Good = AllEqual<[1, 1], 1> // true
+type Bad = AllEqual<[1, 2], 1> // false
+```
 
 ### `BreakWords<T>`
 

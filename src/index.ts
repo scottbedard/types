@@ -1,3 +1,4 @@
+export { AllEqual } from './AllEqual'
 export { BreakWords } from './BreakWords'
 export { CamelCase } from './CamelCase'
 export { Difference } from './Difference'

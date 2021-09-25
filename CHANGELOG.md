@@ -2,6 +2,7 @@
 
 ## 0.6.0
 
+- [`AllEqual<Sources, Value>`](https://github.com/scottbedard/types#allequalsources-value)
 - [`Extends<A, B>`](https://github.com/scottbedard/types#extendsa-b)
 - [`KebabCase<T>`](https://github.com/scottbedard/types#kebabcaset)
 
