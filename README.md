@@ -19,6 +19,7 @@ npm install @bedard/types
 ## Utility types
 
 - [`BreakWords<T>`](#breakwordst)
+- [`CamelCase<T>`](#camelcaset)
 - [`Difference<A, B>`](#differencea-b)
 - [`Equal<A, B>`](#equala-b)
 - [`Expect<T>`](#expectt)
@@ -45,6 +46,16 @@ Explode a string by common word breaks. This currently includes spaces, hyphens,
 import { BreakWords } from '@bedard/types'
 
 type Words = BreakWords<'one two-three_fourFive'> // ['one', 'two', 'three', 'four', 'Five']
+```
+
+### `CamelCase<T>`
+
+Convert a string to camel case.
+
+```ts
+import { CamelCase } from '@bedard/types'
+
+type Str = CamelCase<'foo-bar'> // 'fooBar'
 ```
 
 ### `Difference<A, B>`

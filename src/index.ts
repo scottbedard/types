@@ -1,4 +1,5 @@
 export { BreakWords } from './BreakWords'
+export { CamelCase } from './CamelCase'
 export { Difference } from './Difference'
 export { Equal } from './Equal'
 export { Expect } from './Expect'
