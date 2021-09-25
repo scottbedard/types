@@ -25,6 +25,7 @@ npm install @bedard/types
 - [`Expect<T>`](#expectt)
 - [`Intersection<A, B>`](#intersectiona-b)
 - [`Join<Parts, Delimeter>`](#joinparts-delimeter)
+- [`KebabCase`](#kebabcaset)
 - [`MapCapitalize<T>`](#mapcapitalizet)
 - [`MapLowercase<T>`](#maplowercaset)
 - [`NotEqual<A, B>`](#notequala-b)
@@ -109,6 +110,16 @@ import { Join } from '@bedard/types'
 type Str = Join<['a', 'b', 'c']> // 'abc'
 
 type Parts = Join<['a', 'b', 'c'], '.'> // 'a.b.c'
+```
+
+### `KebabCase<T>`
+
+Convert a string to kebab case.
+
+```ts
+import { KebabCase } from '@bedard/types'
+
+type Str = KebabCase<'fooBar'> // 'foo-bar'
 ```
 
 ### `MapCapitalize<T>`
