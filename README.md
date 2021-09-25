@@ -32,6 +32,7 @@ npm install @bedard/types
 - [`Last<T>`](#lastt)
 - [`MapCapitalize<T>`](#mapcapitalizet)
 - [`MapLowercase<T>`](#maplowercaset)
+- [`Not<T>`](#nott)
 - [`NotEqual<A, B>`](#notequala-b)
 - [`Opaque<T, Token>`](#opaquet-token)
 - [`PascalCase<T>`](#pascalcaset)
@@ -187,6 +188,16 @@ Map strings to lowercase.
 import { MapLowercase } from '@bedard/types'
 
 type Lower = MapLowercase<['A', 'B']> // ['a', 'b']
+```
+
+### `Not<T>`
+
+Reverse the boolean value of `T`.
+
+```ts
+import { Not } from '@bedard/types'
+
+type Test = Not<true> // false
 ```
 
 ### `NotEqual<A, B>`
