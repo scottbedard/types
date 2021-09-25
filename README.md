@@ -28,6 +28,7 @@ npm install @bedard/types
 - [`Intersection<A, B>`](#intersectiona-b)
 - [`Join<Parts, Delimeter>`](#joinparts-delimeter)
 - [`KebabCase<T>`](#kebabcaset)
+- [`Last<T>`](#lastt)
 - [`MapCapitalize<T>`](#mapcapitalizet)
 - [`MapLowercase<T>`](#maplowercaset)
 - [`NotEqual<A, B>`](#notequala-b)
@@ -143,6 +144,17 @@ Convert a string to kebab case.
 import { KebabCase } from '@bedard/types'
 
 type Str = KebabCase<'fooBar'> // 'foo-bar'
+```
+
+### `Last<T>`
+
+Extract the last element of a string or array.
+
+```ts
+import { Last } from '@bedard/types'
+
+type LastChar = Last<'abc'> // 'c'
+type LastItem = Last<[1, 2, 3]>, // 3
 ```
 
 ### `MapCapitalize<T>`
