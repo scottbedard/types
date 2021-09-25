@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.6.0
+
+- [`Extends<A, B>`](https://github.com/scottbedard/types#extendsa-b)
+- [`KebabCase<T>`](https://github.com/scottbedard/types#kebabcaset)
+
 ## 0.5.0
 
 - [`BreakWords<T>`](https://github.com/scottbedard/types#breakcaset)

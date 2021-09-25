@@ -23,6 +23,7 @@ npm install @bedard/types
 - [`Difference<A, B>`](#differencea-b)
 - [`Equal<A, B>`](#equala-b)
 - [`Expect<T>`](#expectt)
+- [`Extends<A, B>`](#extendsa-b)
 - [`Intersection<A, B>`](#intersectiona-b)
 - [`Join<Parts, Delimeter>`](#joinparts-delimeter)
 - [`KebabCase<T>`](#kebabcaset)
@@ -88,6 +89,16 @@ Verify that `T` is `true`. This allows for assertions to be made using the type 
 import { Expect } from '@bedard/types'
 
 type Test = Expect<true>
+```
+
+### `Extends<A, B>`
+
+Types `true` if `A` extends `B`.
+
+```ts
+import { Extends } from '@bedard/types'
+
+type Test = Extends<'foo', string> // true
 ```
 
 ### `Intersection<A, B>`
