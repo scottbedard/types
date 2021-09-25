@@ -129,14 +129,16 @@ type Items = Shift<['foo', 'bar', 'baz']> // ['bar', 'baz']
 
 ### `Split<Source, Delimeter>`
 
-Split `Source` by `Delimeter`. This type is the opposite of [`Join`](#joinparts-delimeter).
+Split `Source` by `Delimeter`. This type is the opposite of [`Join`](#joinparts-delimeter). Note that to split by multiple delimeters the second argument must be a `string[]`, as a union will create a [distributive conditional type](https://www.typescriptlang.org/docs/handbook/2/conditional-types.html#distributive-conditional-types).
 
 ```ts
 import { Split } from '@bedard/types'
 
 type Characters = Split<'abc'> // ['a', 'b', 'c']
 
-type Parts = Split<'a.b.c', '.'> // ['a', 'b', 'c']
+type SingleDelimeter = Split<'a.b.c', '.'> // ['a', 'b', 'c']
+
+type MultipleDelimeters = Split<'a.b-c', ['.', '-']> // ['a', 'b', 'c']
 ```
 
 ### `SymmetricDifference<A, B>`
