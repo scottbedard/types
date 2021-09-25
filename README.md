@@ -18,6 +18,7 @@ npm install @bedard/types
 
 ## Utility types
 
+- [`BreakWords<T>`](#breakwordst)
 - [`Difference<A, B>`](#differencea-b)
 - [`Equal<A, B>`](#equala-b)
 - [`Expect<T>`](#expectt)
@@ -32,6 +33,16 @@ npm install @bedard/types
 - [`ValueOf<T>`](#valueoft)
 - [`Without<A, B>`](#withouta-b)
 - [`XOR<A, B>`](#xora-b)
+
+### `BreakWords<T>`
+
+Explode a string by common word breaks. This currently includes spaces, hyphens, underscores, and camel casing.
+
+```ts
+import { BreakWords } from '@bedard/types'
+
+type Words = BreakWords<'one two-three_fourFive'> // ['one', 'two', 'three', 'four', 'Five']
+```
 
 ### `Difference<A, B>`
 
