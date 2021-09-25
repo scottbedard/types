@@ -29,6 +29,7 @@ npm install @bedard/types
 - [`Opaque<T, Token>`](#opaquet-token)
 - [`Pop<T>`](#popt)
 - [`Shift<T>`](#shiftt)
+- [`SnakeCase<T>`](#snakecaset)
 - [`Split<Source, Delimeter>`](#splitsource-delimeter)
 - [`SymmetricDifference<A, B>`](#symmetricdifferencea-b)
 - [`ValueOf<T>`](#valueoft)
@@ -147,6 +148,16 @@ Remove the first element of `T`.
 import { Shift } from '@bedard/types'
 
 type Items = Shift<['foo', 'bar', 'baz']> // ['bar', 'baz']
+```
+
+### `SnakeCase<T>`
+
+Convert a string to snake case.
+
+```ts
+import { SnakeCase } from '@bedard/types'
+
+type Str = SnakeCase<'fooBar'> // 'foo_bar'
 ```
 
 ### `Split<Source, Delimeter>`
