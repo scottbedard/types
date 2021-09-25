@@ -16,4 +16,8 @@ describe('Split', () => {
   it('empty delimeter', () => {
     type Test = Expect<Equal<['a', 'b', 'c'], Split<'abc', ''>>>
   })
+
+  it('multiple delimers', () => {
+    type Test = Expect<Equal<['a', 'b', 'c'], Split<'a.b-c', ['.', '-']>>>
+  })
 })
