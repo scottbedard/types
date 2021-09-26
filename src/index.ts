@@ -1,6 +1,8 @@
 export { AllEqual } from './AllEqual'
 export { BreakWords } from './BreakWords'
 export { CamelCase } from './CamelCase'
+export { CamelCaseKeys } from './CamelCaseKeys'
+export { CamelCaseKeysDeep } from './CamelCaseKeysDeep'
 export { Difference } from './Difference'
 export { Equal } from './Equal'
 export { Expect } from './Expect'

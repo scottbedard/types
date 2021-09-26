@@ -2,6 +2,8 @@
 
 ## 0.7.0
 
+- [`CamelCaseKeys`](https://github.com/scottbedard/types#camelcasekeyst)
+- [`CamelCaseKeysDeep`](https://github.com/scottbedard/types#camelcasekeysdeept)
 - [`MapUppercase<T>`](https://github.com/scottbedard/types#mapuppercaset)
 - [`ScreamingSnakeCase<T>`](https://github.com/scottbedard/types#screamingsnakecaset)
 

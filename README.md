@@ -21,6 +21,8 @@ npm install @bedard/types
 - [`AllEqual<Sources, Value>`](#allequalsources-value)
 - [`BreakWords<T>`](#breakwordst)
 - [`CamelCase<T>`](#camelcaset)
+- [`CamelCaseKeys<T>`](#camelcasekeyst)
+- [`CamelCaseKeysDeep<T>`](#camelcasekeysdeept)
 - [`Difference<A, B>`](#differencea-b)
 - [`Equal<A, B>`](#equala-b)
 - [`Expect<T>`](#expectt)
@@ -76,6 +78,26 @@ Convert a string to camel case.
 import { CamelCase } from '@bedard/types'
 
 type Str = CamelCase<'foo-bar'> // 'fooBar'
+```
+
+### `CamelCaseKeys<T>`
+
+Camel case object keys.
+
+```ts
+import { CamelCaseKeys } from '@bedard/types'
+
+type Obj = CamelCaseKeys<{ foo_bar: any }> // { fooBar: any }
+```
+
+### `CamelCaseKeysDeep<T>`
+
+Deeply camel case object keys.
+
+```ts
+import { CamelCaseKeysDeep } from '@bedard/types'
+
+type Obj = CamelCaseKeysDeep<{ foo_bar: { one_two: any }}> // { fooBar: { oneTwo: any }} }
 ```
 
 ### `Difference<A, B>`
