@@ -7,6 +7,8 @@
 - [`KebabCaseKeys`](https://github.com/scottbedard/types#kebabcasekeyst)
 - [`KebabCaseKeysDeep`](https://github.com/scottbedard/types#kebabcasekeysdeept)
 - [`MapUppercase<T>`](https://github.com/scottbedard/types#mapuppercaset)
+- [`PascalCaseKeys`](https://github.com/scottbedard/types#pascalcasekeyst)
+- [`PascalCaseKeysDeep`](https://github.com/scottbedard/types#pascalcasekeysdeept)
 - [`ScreamingSnakeCase<T>`](https://github.com/scottbedard/types#screamingsnakecaset)
 
 ## 0.6.0

@@ -41,6 +41,8 @@ npm install @bedard/types
 - [`NotEqual<A, B>`](#notequala-b)
 - [`Opaque<T, Token>`](#opaquet-token)
 - [`PascalCase<T>`](#pascalcaset)
+- [`PascalCaseKeys<T>`](#pascalcasekeyst)
+- [`PascalCaseKeysDeep<T>`](#pascalcasekeysdeept)
 - [`Pop<T>`](#popt)
 - [`ScreamingSnakeCase<T>`](#screamingsnakecaset)
 - [`Shift<T>`](#shiftt)
@@ -286,6 +288,26 @@ Convert a string to pascal case.
 import { PascalCase } from '@bedard/types'
 
 type Str = PascalCase<'foo-bar'> // 'FooBar'
+```
+
+### `PascalCaseKeys<T>`
+
+Kebab case object keys.
+
+```ts
+import { PascalCaseKeys } from '@bedard/types'
+
+type Obj = PascalCaseKeys<{ foo_bar: any }> // { 'foo-bar': any }
+```
+
+### `PascalCaseKeysDeep<T>`
+
+Deeply pascal case object keys.
+
+```ts
+import { PascalCaseKeysDeep } from '@bedard/types'
+
+type Obj = PascalCaseKeysDeep<{ foo_bar: { one_two: any }}> // { FooBar: { OneTwo: any }} }
 ```
 
 ### `Pop<T>`
