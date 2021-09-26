@@ -12,6 +12,8 @@
 - [`ScreamingSnakeCase<T>`](https://github.com/scottbedard/types#screamingsnakecaset)
 - [`ScreamingSnakeCaseKeys`](https://github.com/scottbedard/types#screamingsnakecasekeyst)
 - [`ScreamingSnakeCaseKeysDeep`](https://github.com/scottbedard/types#screamingsnakecasekeysdeept)
+- [`SnakeCaseKeys`](https://github.com/scottbedard/types#snakecasekeyst)
+- [`SnakeCaseKeysDeep`](https://github.com/scottbedard/types#snakecasekeysdeept)
 
 ## 0.6.0
 

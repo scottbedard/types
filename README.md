@@ -372,6 +372,26 @@ import { SnakeCase } from '@bedard/types'
 type Str = SnakeCase<'fooBar'> // 'foo_bar'
 ```
 
+### `SnakeCaseKeys<T>`
+
+Snake case object keys.
+
+```ts
+import { SnakeCaseKeys } from '@bedard/types'
+
+type Obj = SnakeCaseKeys<{ fooBar: any }> // { foo_bar: any }
+```
+
+### `SnakeCaseKeysDeep<T>`
+
+Deeply snake case object keys.
+
+```ts
+import { SnakeCaseKeysDeep } from '@bedard/types'
+
+type Obj = SnakeCaseKeysDeep<{ fooBar: { oneTwo: any }}> // { foo_bar: { one_two: any }}
+```
+
 ### `Split<Source, Delimeter>`
 
 Split `Source` by `Delimeter`. This type is the opposite of [`Join`](#joinparts-delimeter). Note that to split by multiple delimeters the second argument must be a `string[]`, as unions will create a [distributive conditional type](https://www.typescriptlang.org/docs/handbook/2/conditional-types.html#distributive-conditional-types).
