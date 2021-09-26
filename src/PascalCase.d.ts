@@ -9,4 +9,4 @@ import { MapLowercase } from './MapLowercase'
  * @example
  * type Str = PascalCase<'foo-bar'> // 'FooBar'
  */
-export type PascalCase<T extends string> = Capitalize<Join<MapCapitalize<MapLowercase<BreakWords<T>>>>>
+export type PascalCase<T extends string> = Join<MapCapitalize<MapLowercase<BreakWords<T>>>>
