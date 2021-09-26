@@ -65,7 +65,7 @@ Explode a string by common word breaks. This currently includes spaces, hyphens,
 ```ts
 import { BreakWords } from '@bedard/types'
 
-type Words = BreakWords<'one twoThree-four'> // ['one', 'two', 'three', 'four']
+type Words = BreakWords<'one twoThree-four'> // ['one', 'two', 'Three', 'four']
 ```
 
 ### `CamelCase<T>`
