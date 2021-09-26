@@ -1,3 +1,5 @@
+import { Equal } from './Equal'
+
 /**
  * Split `Source` by `Delimeter`.
  * 
@@ -16,11 +18,12 @@ export type Split<
 type WalkString<
   Source extends string,
   Delimeter extends string = '',
+  Parts extends string[] = [],
 > = Source extends `${infer Head}${Delimeter}${infer Tail}`
-  ? [Head, ...WalkString<Tail, Delimeter>]
-  : Source extends Delimeter
-    ? []
-    : [Source]
+  ? WalkString<Tail, Delimeter, [...Parts, Head]>
+  : Equal<Source, ''> extends true
+    ? Parts
+    : [...Parts, Source]
 
 // walk over strings and split each by delimeter
 type WalkParts<
