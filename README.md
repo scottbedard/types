@@ -256,7 +256,7 @@ type Items = Pop<['foo', 'bar', 'baz']> // ['foo', 'bar']
 
 ### `ScreamingSnakeCase<T>`
 
-Convert a string to snake case.
+Convert a string to screaming snake case.
 
 ```ts
 import { ScreamingSnakeCase } from '@bedard/types'
