@@ -45,6 +45,8 @@ npm install @bedard/types
 - [`PascalCaseKeysDeep<T>`](#pascalcasekeysdeept)
 - [`Pop<T>`](#popt)
 - [`ScreamingSnakeCase<T>`](#screamingsnakecaset)
+- [`ScreamingSnakeCaseKeys<T>`](#screamingsnakecasekeyst)
+- [`ScreamingSnakeCaseKeysDeep<T>`](#screamingsnakecasekeysdeept)
 - [`Shift<T>`](#shiftt)
 - [`SnakeCase<T>`](#snakecaset)
 - [`Split<Source, Delimeter>`](#splitsource-delimeter)
@@ -328,6 +330,26 @@ Convert a string to screaming snake case.
 import { ScreamingSnakeCase } from '@bedard/types'
 
 type Str = ScreamingSnakeCase<'fooBar'> // 'FOO_BAR'
+```
+
+### `ScreamingSnakeCaseKeys<T>`
+
+Screaming snake case object keys.
+
+```ts
+import { ScreamingSnakeCaseKeys } from '@bedard/types'
+
+type Obj = ScreamingSnakeCaseKeys<{ foo_bar: any }> // { FOO_BAR: any }
+```
+
+### `ScreamingSnakeCaseKeysDeep<T>`
+
+Deeply screaming snake case object keys.
+
+```ts
+import { ScreamingSnakeCaseKeysDeep } from '@bedard/types'
+
+type Obj = ScreamingSnakeCaseKeysDeep<{ foo_bar: { one_two: any }}> // { FOO_BAR: { ONE_TWO: any }} }
 ```
 
 ### `Shift<T>`

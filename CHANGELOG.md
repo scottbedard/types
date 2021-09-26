@@ -10,6 +10,8 @@
 - [`PascalCaseKeys`](https://github.com/scottbedard/types#pascalcasekeyst)
 - [`PascalCaseKeysDeep`](https://github.com/scottbedard/types#pascalcasekeysdeept)
 - [`ScreamingSnakeCase<T>`](https://github.com/scottbedard/types#screamingsnakecaset)
+- [`ScreamingSnakeCaseKeys`](https://github.com/scottbedard/types#screamingsnakecasekeyst)
+- [`ScreamingSnakeCaseKeysDeep`](https://github.com/scottbedard/types#screamingsnakecasekeysdeept)
 
 ## 0.6.0
 
