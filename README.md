@@ -103,7 +103,7 @@ Deeply camel case object keys.
 ```ts
 import { CamelCaseKeysDeep } from '@bedard/types'
 
-type Obj = CamelCaseKeysDeep<{ foo_bar: { one_two: any }}> // { fooBar: { oneTwo: any }} }
+type Obj = CamelCaseKeysDeep<{ foo_bar: { one_two: any }}> // { fooBar: { oneTwo: any }}
 ```
 
 ### `Difference<A, B>`
@@ -206,7 +206,7 @@ Deeply kebab case object keys.
 ```ts
 import { KebabCaseKeysDeep } from '@bedard/types'
 
-type Obj = KebabCaseKeysDeep<{ foo_bar: { one_two: any }}> // { 'foo-bar': { 'one-two': any }} }
+type Obj = KebabCaseKeysDeep<{ foo_bar: { one_two: any }}> // { 'foo-bar': { 'one-two': any }}
 ```
 
 ### `Last<T>`
@@ -309,7 +309,7 @@ Deeply pascal case object keys.
 ```ts
 import { PascalCaseKeysDeep } from '@bedard/types'
 
-type Obj = PascalCaseKeysDeep<{ foo_bar: { one_two: any }}> // { FooBar: { OneTwo: any }} }
+type Obj = PascalCaseKeysDeep<{ foo_bar: { one_two: any }}> // { FooBar: { OneTwo: any }}
 ```
 
 ### `Pop<T>`
@@ -349,7 +349,7 @@ Deeply screaming snake case object keys.
 ```ts
 import { ScreamingSnakeCaseKeysDeep } from '@bedard/types'
 
-type Obj = ScreamingSnakeCaseKeysDeep<{ foo_bar: { one_two: any }}> // { FOO_BAR: { ONE_TWO: any }} }
+type Obj = ScreamingSnakeCaseKeysDeep<{ foo_bar: { one_two: any }}> // { FOO_BAR: { ONE_TWO: any }}
 ```
 
 ### `Shift<T>`
