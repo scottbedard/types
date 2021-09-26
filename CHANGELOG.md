@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.7.0
+
+- [`MapUppercase<T>`](https://github.com/scottbedard/types#mapuppercaset)
+
 ## 0.6.0
 
 - [`AllEqual<Sources, Value>`](https://github.com/scottbedard/types#allequalsources-value)
