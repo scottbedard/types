@@ -60,12 +60,12 @@ type Bad = AllEqual<[1, 2], 1> // false
 
 ### `BreakWords<T>`
 
-Explode a string by common word breaks. This currently includes spaces, hyphens, underscores, and camel casing.
+Explode a string by common word breaks. This currently includes spaces, hyphens, underscores, and casing changes.
 
 ```ts
 import { BreakWords } from '@bedard/types'
 
-type Words = BreakWords<'one two-three_fourFive'> // ['one', 'two', 'three', 'four', 'Five']
+type Words = BreakWords<'one twoThree-four'> // ['one', 'two', 'three', 'four']
 ```
 
 ### `CamelCase<T>`
