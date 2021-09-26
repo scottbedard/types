@@ -31,6 +31,8 @@ npm install @bedard/types
 - [`Intersection<A, B>`](#intersectiona-b)
 - [`Join<Parts, Delimeter>`](#joinparts-delimeter)
 - [`KebabCase<T>`](#kebabcaset)
+- [`KebabCaseKeys<T>`](#kebabcasekeyst)
+- [`KebabCaseKeysDeep<T>`](#kebabcasekeysdeept)
 - [`Last<T>`](#lastt)
 - [`MapCapitalize<T>`](#mapcapitalizet)
 - [`MapLowercase<T>`](#maplowercaset)
@@ -181,6 +183,26 @@ Convert a string to kebab case.
 import { KebabCase } from '@bedard/types'
 
 type Str = KebabCase<'fooBar'> // 'foo-bar'
+```
+
+### `KebabCaseKeys<T>`
+
+Kebab case object keys.
+
+```ts
+import { KebabCaseKeys } from '@bedard/types'
+
+type Obj = KebabCaseKeys<{ foo_bar: any }> // { 'foo-bar': any }
+```
+
+### `KebabCaseKeysDeep<T>`
+
+Deeply kebab case object keys.
+
+```ts
+import { KebabCaseKeysDeep } from '@bedard/types'
+
+type Obj = KebabCaseKeysDeep<{ foo_bar: { one_two: any }}> // { 'foo-bar': { 'one-two': any }} }
 ```
 
 ### `Last<T>`

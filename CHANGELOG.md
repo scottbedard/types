@@ -4,6 +4,8 @@
 
 - [`CamelCaseKeys`](https://github.com/scottbedard/types#camelcasekeyst)
 - [`CamelCaseKeysDeep`](https://github.com/scottbedard/types#camelcasekeysdeept)
+- [`KebabCaseKeys`](https://github.com/scottbedard/types#kebabcasekeyst)
+- [`KebabCaseKeysDeep`](https://github.com/scottbedard/types#kebabcasekeysdeept)
 - [`MapUppercase<T>`](https://github.com/scottbedard/types#mapuppercaset)
 - [`ScreamingSnakeCase<T>`](https://github.com/scottbedard/types#screamingsnakecaset)
 
