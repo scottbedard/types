@@ -38,6 +38,7 @@ npm install @bedard/types
 - [`Opaque<T, Token>`](#opaquet-token)
 - [`PascalCase<T>`](#pascalcaset)
 - [`Pop<T>`](#popt)
+- [`ScreamingSnakeCase<T>`](#screamingsnakecaset)
 - [`Shift<T>`](#shiftt)
 - [`SnakeCase<T>`](#snakecaset)
 - [`Split<Source, Delimeter>`](#splitsource-delimeter)
@@ -251,6 +252,16 @@ Remove the last element of `T`.
 import { Pop } from '@bedard/types'
 
 type Items = Pop<['foo', 'bar', 'baz']> // ['foo', 'bar']
+```
+
+### `ScreamingSnakeCase<T>`
+
+Convert a string to snake case.
+
+```ts
+import { ScreamingSnakeCase } from '@bedard/types'
+
+type Str = ScreamingSnakeCase<'fooBar'> // 'FOO_BAR'
 ```
 
 ### `Shift<T>`

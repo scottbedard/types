@@ -1,6 +1,5 @@
 import { BreakWords } from './BreakWords'
 import { Join } from './Join'
-import { MapLowercase } from './MapLowercase'
 
 /**
  * Convert a string to snake case.
@@ -8,4 +7,4 @@ import { MapLowercase } from './MapLowercase'
  * @example
  * type Str = SnakeCase<'fooBar'> // 'foo_bar'
  */
-export type SnakeCase<T extends string> = Join<MapLowercase<BreakWords<T>>, '_'>
+export type SnakeCase<T extends string> = Lowercase<Join<BreakWords<T>, '_'>>

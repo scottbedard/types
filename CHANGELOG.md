@@ -3,6 +3,7 @@
 ## 0.7.0
 
 - [`MapUppercase<T>`](https://github.com/scottbedard/types#mapuppercaset)
+- [`ScreamingSnakeCase<T>](https://github.com/scottbedard/types#screamingsnakecaset)
 
 ## 0.6.0
 
