@@ -1,5 +1,6 @@
 import { Alphabet } from './utils'
 import { Equal } from './Equal'
+import { Last } from './Last'
 import { Split } from './Split'
 
 /**
@@ -24,17 +25,30 @@ type BreakParts<
 // break words by non-letter characters
 type BreakChars<T extends string> = Split<T, ['-', '_', ' ']>
 
-// break words by case
+// break word by casing change
 type BreakCase<
+  T extends string,
+> = T extends Uppercase<T>
+  ? [T]
+  : T extends Lowercase<T>
+    ? [T]
+    : BreakCaseMixed<T>
+
+// break mixed case words by casing change
+type BreakCaseMixed<
   T extends string,
   CurrentWord extends string = '',
   Words extends string[] = [],
-> = Equal<CurrentWord, ''> extends true
-  ? T extends `${infer First}${infer Rest}`
-    ? BreakCase<Rest, First, Words>
-    : never
-  : T extends `${infer First}${infer Rest}`
-    ? First extends Alphabet
-      ? BreakCase<Rest, `${CurrentWord}${First}`, Words>
-      : BreakCase<T, '', [...Words, CurrentWord]>
-    : [...Words, CurrentWord]
+> = T extends `${infer CurrentChar}${infer RestChars}`
+  ? CurrentWord extends ''
+    ? BreakCaseMixed<RestChars, CurrentChar, Words>
+    : SameWord<CurrentChar, Last<CurrentWord>> extends true
+      ? BreakCaseMixed<RestChars, `${CurrentWord}${CurrentChar}`, Words>
+      : BreakCaseMixed<RestChars, CurrentChar, [...Words, CurrentWord]>
+  : [...Words, CurrentWord]
+
+type SameWord<A, B> = A extends Lowercase<A>
+  ? true
+  : B extends Uppercase<B>
+    ? true
+    : false
