@@ -49,6 +49,8 @@ npm install @bedard/types
 - [`ScreamingSnakeCaseKeysDeep<T>`](#screamingsnakecasekeysdeept)
 - [`Shift<T>`](#shiftt)
 - [`SnakeCase<T>`](#snakecaset)
+- [`SnakeCaseKeys<T>`](#snakecasekeyst)
+- [`SnakeCaseKeysDeep<T>`](#snakecasekeysdeept)
 - [`Split<Source, Delimeter>`](#splitsource-delimeter)
 - [`SymmetricDifference<A, B>`](#symmetricdifferencea-b)
 - [`ValueOf<T>`](#valueoft)
