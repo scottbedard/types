@@ -120,7 +120,7 @@ type Left = Difference<{ a: any, b: any }, { b: any, c: any }> // { a: any }
 
 ### `Equal<A, B>`
 
-Types `true` if `A` and `B` are equal. This is mainly used with [`Expect`](#expect) to verify that types are working as expected. See [`NotEqual`](#notequal) for the inverse of this type.
+Types `true` if `A` and `B` are equal. This is mainly used with [`Expect`](#expectt) to verify that types are working as expected. See [`NotEqual`](#notequala-b) for the inverse of this type.
 
 ```ts
 import { Expect, Equal } from '@bedard/types'
@@ -130,7 +130,7 @@ type Test = Expect<Equal<number, number>>
 
 ### `Expect<T>`
 
-Verify that `T` is `true`. This allows for assertions to be made using the type system. See [`Equal`](#equal) and [`NotEqual`](#notequal) for more usage examples.
+Verify that `T` is `true`. This allows for assertions to be made using the type system. See [`Equal`](#equala-b) and [`NotEqual`](#notequala-b) for more usage examples.
 
 ```ts
 import { Expect } from '@bedard/types'
@@ -264,7 +264,7 @@ type Test = Not<true> // false
 
 ### `NotEqual<A, B>`
 
-Types `true` if `A` does not equal `B`. This type is mainly used with [`Expect`](#expect) to verify that types are working as expected. See [`Equal`](#equal) for the inverse of this type.
+Types `true` if `A` does not equal `B`. This type is mainly used with [`Expect`](#expectt) to verify that types are working as expected. See [`Equal`](#equala-b) for the inverse of this type.
 
 ```ts
 import { Expect, NotEqual } from '@bedard/types'
