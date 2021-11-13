@@ -53,6 +53,7 @@ npm install @bedard/types
 - [`SnakeCaseKeysDeep<T>`](#snakecasekeysdeept)
 - [`Split<Source, Delimeter>`](#splitsource-delimeter)
 - [`SymmetricDifference<A, B>`](#symmetricdifferencea-b)
+- [`Transparent<T>`](#transparentt)
 - [`ValueOf<T>`](#valueoft)
 - [`Without<A, B>`](#withouta-b)
 - [`XOR<A, B>`](#xora-b)
@@ -418,6 +419,16 @@ import { SymmetricDifference } from '@bedard/types'
 type OuterSet = SymmetricDifference<'a' | 'b', 'b' | 'c'> // 'a' | 'c'
 
 type OuterObj= SymmetricDifference<{ a: any, b: any }, { b: any, c: any }> // { a: any, c: any }
+```
+
+### `Transparent<T>`
+
+A type that does not encode any additional data. This type the inverse of [`Opaque<T>`](#opaquet-token).
+
+```ts
+import { Transparent } from '@bedard/types'
+
+type NonOpaqueString = Transparent<string>
 ```
 
 ### `ValueOf<T>`

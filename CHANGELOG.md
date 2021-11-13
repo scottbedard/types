@@ -3,6 +3,7 @@
 ## 0.8.0
 
 - Removed build step, node module will expose src files directly.
+- [`Transparent<T>`](https://github.com/scottbedard/types#transparentt)
 ## 0.7.0
 
 - [`CamelCaseKeys`](https://github.com/scottbedard/types#camelcasekeyst)
