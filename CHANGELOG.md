@@ -1,8 +1,12 @@
 # Changelog
 
+## 0.8.3
+
+- Fix strict mode errors
+
 ## 0.8.0
 
-- Removed build step, node module will expose src files directly.
+- Removed build step, node module will expose src files directly
 - [`Transparent<T>`](https://github.com/scottbedard/types#transparentt)
 ## 0.7.0
 
