@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.8.0
+
+- Removed build step, node module will expose src files directly.
 ## 0.7.0
 
 - [`CamelCaseKeys`](https://github.com/scottbedard/types#camelcasekeyst)
