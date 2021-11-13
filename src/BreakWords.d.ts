@@ -1,5 +1,3 @@
-import { Alphabet } from './utils'
-import { Equal } from './Equal'
 import { Last } from './Last'
 import { Split } from './Split'
 

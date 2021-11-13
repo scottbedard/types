@@ -36,6 +36,5 @@ export { SymmetricDifference } from './SymetricDifference'
 export { ValueOf } from './ValueOf'
 export { Without } from './Without'
 export { XOR } from './XOR'
-export * from './utils'
 
 export const version = 'x.y.z'
