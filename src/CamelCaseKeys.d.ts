@@ -7,5 +7,5 @@ import { CamelCase } from './CamelCase'
  * type Obj = CamelCaseKeys<{ foo_bar: any }> // { fooBar: any }
  */
 export type CamelCaseKeys<T> = T extends Record<string, any>
-  ? { [K in keyof T as CamelCase<K>]: T[K] }
+  ? { [K in Extract<keyof T, string> as CamelCase<K>]: T[K] }
   : T

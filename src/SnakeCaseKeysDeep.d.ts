@@ -9,5 +9,5 @@ import { SnakeCase } from './index'
 export type SnakeCaseKeysDeep<T> = T extends Array<infer U>
   ? SnakeCaseKeysDeep<U>[]
   : T extends Record<string, any>
-    ? { [K in keyof T as SnakeCase<K>]: SnakeCaseKeysDeep<T[K]> }
+    ? { [K in Extract<keyof T, string> as SnakeCase<K>]: SnakeCaseKeysDeep<T[K]> }
     : T

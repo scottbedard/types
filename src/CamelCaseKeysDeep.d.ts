@@ -9,5 +9,5 @@ import { CamelCase } from './index'
 export type CamelCaseKeysDeep<T> = T extends Array<infer U>
   ? CamelCaseKeysDeep<U>[]
   : T extends Record<string, any>
-    ? { [K in keyof T as CamelCase<K>]: CamelCaseKeysDeep<T[K]> }
+    ? { [K in Extract<keyof T, string> as CamelCase<K>]: CamelCaseKeysDeep<T[K]> }
     : T
