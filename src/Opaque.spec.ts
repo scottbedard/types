@@ -1,4 +1,4 @@
-import { Opaque } from './index'
+import { Opaque, Transparent } from './index'
 
 describe('Opaque', () => {
   it('adds semantic data to types', () => {
@@ -26,5 +26,16 @@ describe('Opaque', () => {
     const double = (x: number) => x * 2
 
     double(dollars)
+  })
+
+  it('transparent', () => {
+    const foo: Transparent<string> = 'foo'
+
+    const bar = 'bar' as Opaque<string>
+    // @ts-expect-error
+    const baz: Transparent<string> = bar
+
+    // @ts-expect-error
+    const qux: Transparent<string> = 6
   })
 })
