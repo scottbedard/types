@@ -3,12 +3,15 @@ const fs = require('fs')
 const path = require('path')
 const pkg = require('../package.json')
 
-const indexPath = path.resolve(__dirname, '../src/index.ts')
+const rootIndex = path.resolve(__dirname, '../index.ts')
+const srcIndex = path.resolve(__dirname, '../src/index.ts')
 
 async function cli() {
-  const src = String(fs.readFileSync(indexPath)).replace('x.y.z', pkg.version)
+  const src = String(fs.readFileSync(srcIndex)).replace('x.y.z', pkg.version)
 
-  fs.writeFileSync(indexPath, src)
+  fs.writeFileSync(srcIndex, src)
+
+  fs.writeFileSync(rootIndex, `export * from './src/index'`)
 
   exec('npm publish')
 }
