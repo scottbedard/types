@@ -8,5 +8,9 @@ export type MapCapitalize<
   T extends string[],
   Acc extends string[] = [],
 > = T extends [infer Head, ...infer Tail]
-  ? MapCapitalize<Tail, [...Acc, Capitalize<Head>]>
+  ? Head extends string
+    ? Tail extends string[]
+      ? MapCapitalize<Tail, [...Acc, Capitalize<Head>]>
+      : never
+    : never
   : Acc

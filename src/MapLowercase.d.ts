@@ -8,5 +8,9 @@ export type MapLowercase<
   T extends string[],
   Acc extends string[] = [],
 > = T extends [infer Head, ...infer Tail]
-  ? MapLowercase<Tail, [...Acc, Lowercase<Head>]>
+  ? Head extends string
+    ? Tail extends string[]
+      ? MapLowercase<Tail, [...Acc, Lowercase<Head>]>
+      : never
+    : never
   : Acc

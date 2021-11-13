@@ -7,17 +7,18 @@ import { Split } from './Split'
  * @example
  * type Words = BreakWords<'one two-three_fourFive'> // ['one', 'two', 'three', 'four', 'Five']
  */
-export type BreakWords<
-  T extends string,
-  Parts extends string[] = []
-> = BreakParts<BreakChars<T>>
+export type BreakWords<T extends string> = BreakParts<BreakChars<T>>
 
 // break a string into parts
 type BreakParts<
   Parts extends string[],
   Acc extends string[] = []
 > = Parts extends [infer Head, ...infer Tail]
-  ? BreakParts<Tail, [...Acc, ...BreakCase<Head>]>
+  ? Head extends string
+    ? Tail extends string[]
+      ? BreakParts<Tail, [...Acc, ...BreakCase<Head>]>
+      : never
+    : never
   : Acc
 
 // break words by non-letter characters
@@ -45,7 +46,7 @@ type BreakCaseMixed<
       : BreakCaseMixed<RestChars, CurrentChar, [...Words, CurrentWord]>
   : [...Words, CurrentWord]
 
-type SameWord<A, B> = A extends Lowercase<A>
+type SameWord<A extends string, B extends string> = A extends Lowercase<A>
   ? true
   : B extends Uppercase<B>
     ? true

@@ -12,7 +12,9 @@ export type Split<
   Delimeter extends string | string[] = ''
 > = Delimeter extends string[]
   ? WalkDelimeters<[Source], Delimeter>
-  : WalkString<Source, Delimeter>
+  : Delimeter extends string
+    ? WalkString<Source, Delimeter>
+    : never
 
 // walk over single string and split by delimeter
 type WalkString<
@@ -31,14 +33,21 @@ type WalkParts<
   Delimeter extends string,
   Acc extends string[] = [],
 > = Parts extends [infer Head, ...infer Tail]
-  ? WalkParts<Tail, Delimeter, [...Acc, ...WalkString<Head, Delimeter>]>
+  ? Tail extends string[]
+    ? Head extends string
+      ? WalkParts<Tail, Delimeter, [...Acc, ...WalkString<Head, Delimeter>]>
+      : never
+    : never
   : Acc
 
 // walk over delimeters and split parts by current delimeter
 type WalkDelimeters<
   Parts extends string[],
   Delimeters extends string[],
-  Acc extends string[] = [],
 > = Delimeters extends [infer Head, ...infer Tail]
-  ? WalkDelimeters<WalkParts<Parts, Head>, Tail>
+  ? Head extends string
+    ? Tail extends string[]
+      ? WalkDelimeters<WalkParts<Parts, Head>, Tail>
+      : never
+    : never
   : Parts

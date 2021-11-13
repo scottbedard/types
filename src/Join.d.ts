@@ -13,6 +13,7 @@ export type Join<
   : Parts extends [string]
     ? `${Parts[0]}`
     : Parts extends [string, ...infer Tail]
-      // @ts-expect-error https://github.com/microsoft/TypeScript/issues/45281
-      ? `${Parts[0]}${Delimeter}${Join<Tail, Delimeter>}`
+      ? Tail extends string[]
+        ? `${Parts[0]}${Delimeter}${Join<Tail, Delimeter>}`
+        : never
       : string
