@@ -5,7 +5,15 @@ import {
 } from './index'
 
 describe('ValueOf', () => {
+  it('array', () => {
+    type T = Array<number | string>
+    
+    type Test = Expect<Equal<number | string, ValueOf<T>>>
+  })
+
   it('object', () => {
-    type Test = Expect<Equal<number | string, ValueOf<{ foo: number, bar: string }>>>
+    type T = { foo: number, bar: string };
+
+    type Test = Expect<Equal<number | string, ValueOf<T>>>
   })
 })

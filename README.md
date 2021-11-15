@@ -431,12 +431,14 @@ type NonOpaqueString = Transparent<string>
 
 ### `ValueOf<T>`
 
-Generate a union from the values of `T`. This can be thought of as an opposite to the [`keyof`](https://www.typescriptlang.org/docs/handbook/2/keyof-types.html) operator.
+Generate a union from the values of `T`.
 
 ```ts
 import { ValueOf } from '@bedard/types'
 
-type Values = ValueOf<{ foo: number, bar: string }> // number | string
+type ArrayValues = ValueOf<Array<string>> // string
+
+type ObjectValues = ValueOf<{ foo: number, bar: string }> // number | string
 ```
 
 ### `Without<A, B>`
