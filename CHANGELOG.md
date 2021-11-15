@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.9.0
+
+- Add array support to [`ValueOf<T>`](https://github.com/scottbedard/types#valueoft)
+
 ## 0.8.3
 
 - Fix strict mode errors
