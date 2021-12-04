@@ -1,3 +1,5 @@
+> ## This library is deprecated, please use [`@bedard/utils`](https://github.com/scottbedard/utils) instead.
+
 # `@bedard/types`
 
 [![Test status](https://img.shields.io/github/workflow/status/scottbedard/types/Test)](https://github.com/scottbedard/types/actions/workflows/test.yml)
